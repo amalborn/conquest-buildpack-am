@@ -1,0 +1,18 @@
+#!/bin/sh
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+indent() {
+   sed -u 's/^/       /'
+}
+
+echo '     -> Running bin/compile.'
+echo Current directory is `pwd` | indent
+echo BUILD_DIR is $BUILD_DIR | indent
+echo CACHE_DIR is $CACHE_DIR | indent
+echo ENV_DIR is $ENV_DIR | indent
+# BUILD_DIR will be archived into a slug.
+# CACHE_DIR will persist between builds.
+# ENV_DIR is a directory containing environment values in file content.
+
