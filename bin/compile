@@ -15,4 +15,5 @@ echo ENV_DIR is $ENV_DIR | indent
 # BUILD_DIR will be archived into a slug.
 # CACHE_DIR will persist between builds.
 # ENV_DIR is a directory containing environment values in file content.
+whoami
 apt-get install wine
