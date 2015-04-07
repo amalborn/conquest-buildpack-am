@@ -22,6 +22,8 @@ echo ENV_DIR is $ENV_DIR | indent
 #apt-get install wine
 # fails because we don't have root.
 
+mkdir -p $CACHE_DIR
+
 WINESRC=wine-1.6.2
 if [ ! -e $CACHE_DIR/$WINESRC.tar.bz2 ]
 then
