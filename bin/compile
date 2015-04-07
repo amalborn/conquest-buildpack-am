@@ -28,7 +28,7 @@ WINESRC=wine-1.6.2
 if [ ! -e $CACHE_DIR/$WINESRC.tar.bz2 ]
 then
    cd $CACHE_DIR
-   curl -LO http://sourceforge.net/projects/wine/files/Source/$WINESRC
+   curl -LO http://sourceforge.net/projects/wine/files/Source/$WINESRC.tar.bz2
 # checksum?
 fi
 
@@ -38,7 +38,7 @@ then
 fi
 
 (cd $CACHE_DIR/$WINESRC;
- ./configure --prefix=$BUILD_DIR/wine
+ ./configure --prefix=$BUILD_DIR/wine \
              --without-alsa \
              --without-capi \
              --without-cms \
