@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
@@ -8,80 +8,3 @@ indent() {
 }
 
 echo '     -> Running bin/compile.'
-echo Current directory is `pwd` | indent
-echo BUILD_DIR is $BUILD_DIR | indent
-echo CACHE_DIR is $CACHE_DIR | indent
-echo ENV_DIR is $ENV_DIR | indent
-# BUILD_DIR will be archived into a slug.
-# CACHE_DIR will persist between builds.
-# ENV_DIR is a directory containing environment values in file content.
-
-#whoami
-# answer: u28037
-
-#apt-get install wine
-# fails because we don't have root.
-
-#mkdir -p $CACHE_DIR
-#
-#WINESRC=wine-1.6.2
-#if [ ! -e $CACHE_DIR/$WINESRC.tar.bz2 ]
-#then
-#   cd $CACHE_DIR
-#   curl -LO http://sourceforge.net/projects/wine/files/Source/$WINESRC.tar.bz2
-## checksum?
-#fi
-#
-#if [ ! -e $CACHE_DIR/$WINESRC ]
-#then
-#   bunzip2 < $WINESRC.tar.bz2 | tar xvf -
-#fi
-#
-## not finishing.
-
-exit 0
-#(cd $CACHE_DIR/$WINESRC;
-# ./configure --prefix=$BUILD_DIR/wine \
-#             --without-alsa \
-#             --without-capi \
-#             --without-cms \
-#             --without-coreaudio \
-#             --without-cups \
-#             --without-curses \
-#             --without-dbus \
-#             --without-fontconfig \
-#             --without-freetype \
-#             --without-gphoto \
-#             --without-glu \
-#             --without-gnutls \
-#             --without-gsm \
-#             --without-gstreamer \
-#             --without-hal \
-#             --without-jpeg \
-#             --without-ldap \
-#             --without-mpg123 \
-#             --without-openal \
-#             --without-opencl \
-#             --without-opengl \
-#             --without-osmesa \
-#             --without-oss \
-#             --without-png \
-#             --without-sane \
-#             --without-tiff \
-#             --without-v4l \
-#             --without-xcomposite \
-#             --without-xcursor \
-#             --without-xinerama \
-#             --without-xinput \
-#             --without-xinput2 \
-#             --without-xml \
-#             --without-xrandr \
-#             --without-xrender \
-#             --without-xshape \
-#             --without-xshm \
-#             --without-xslt \
-#             --without-xxf86vm \
-#             --without-zlib  \
-#             --without-x;
-# make
-#)
