@@ -32,8 +32,8 @@ fi
 
 cd $CACHE_DIR/$WINESRC
 
-apt-get install flex
-apt-get install wine
+sudo apt-get install flex
+sudo apt-get install wine
 
 
 ./configure --prefix=$BUILD_DIR/wine --enable-win64 \
