@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-sudo apt-get install wine
+echo '     -> Running dpkg --add-architecture i386.'
 
-# export WINEARCH=win32
-
-# /usr/local/bin/wineserver -p
-# /usr/local/bin/wine cmd /c echo > /dev/null
-
-
+sudo dpkg --add-architecture i386
