@@ -31,7 +31,7 @@ fi
 
 cd $CACHE_DIR/$WINESRC
 
-./configure --prefix=$BUILD_DIR/wine \
+./configure --prefix=$BUILD_DIR/wine --enable-win64 \
              --without-alsa \
              --without-capi \
              --without-cms \
@@ -77,4 +77,7 @@ cd $CACHE_DIR/$WINESRC
 make
 
 export WINEARCH=win32
+# /usr/local/bin/wineserver -p
+# /usr/local/bin/wine cmd /c echo > /dev/null
+
 
