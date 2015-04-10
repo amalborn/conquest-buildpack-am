@@ -21,6 +21,7 @@ if [ ! -e $CACHE_DIR/$WINESRC.tar.bz2 ]
 then
    cd $CACHE_DIR
    curl -LO http://sourceforge.net/projects/wine/files/Source/$WINESRC.tar.bz2
+
 # checksum?
 fi
 
@@ -30,6 +31,10 @@ then
 fi
 
 cd $CACHE_DIR/$WINESRC
+
+apt-get install flex
+apt-get install wine
+
 
 ./configure --prefix=$BUILD_DIR/wine --enable-win64 \
              --without-alsa \
