@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-echo '     -> Running dpkg --add-architecture i386.'
+echo '     -> Running conquest buidpack.'
 
-sudo dpkg --add-architecture i386
