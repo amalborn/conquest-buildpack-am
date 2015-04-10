@@ -1,3 +1,27 @@
 #!/usr/bin/env bash
 
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
 echo '     -> Running bin/compile.'
+echo Current directory is `pwd` | indent
+echo BUILD_DIR is $BUILD_DIR | indent
+echo CACHE_DIR is $CACHE_DIR | indent
+echo ENV_DIR is $ENV_DIR | indent
+
+mkdir -p $CACHE_DIR
+
+WINESRC=wine-1.6.2
+if [ ! -e $CACHE_DIR/$WINESRC.tar.bz2 ]
+then
+   cd $CACHE_DIR
+   curl -LO http://sourceforge.net/projects/wine/files/Source/$WINESRC.tar.bz2
+# checksum?
+fi
+
+if [ ! -e $CACHE_DIR/$WINESRC ]
+then
+   bunzip2 < $WINESRC.tar.bz2 | tar xvf -
+fi
+
