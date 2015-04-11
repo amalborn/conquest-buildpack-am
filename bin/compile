@@ -1,23 +1,4 @@
 #!/usr/bin/env bash
 
-BUILD_DIR=$1
-CACHE_DIR=$2
-ENV_DIR=$3
-
-indent() {
-   sed -u 's/^/       /'
-}
-
-echo '     -> Running bin/compile.'
-echo Current directory is `pwd` | indent
-echo BUILD_DIR is $BUILD_DIR | indent
-echo CACHE_DIR is $CACHE_DIR | indent
-echo ENV_DIR is $ENV_DIR | indent
-
-
-
-export WINEARCH=win32
-# /usr/local/bin/wineserver -p
-# /usr/local/bin/wine cmd /c echo > /dev/null
-
+sudo add-apt-repository ppa:ubuntu-wine/ppa
 
