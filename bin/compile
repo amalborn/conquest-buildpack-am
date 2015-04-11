@@ -31,9 +31,6 @@ fi
 
 cd $CACHE_DIR/$WINESRC
 
-apt-get wine
-
-
 ./configure --prefix=$BUILD_DIR/wine --enable-win64 \
              --without-alsa \
              --without-capi \
