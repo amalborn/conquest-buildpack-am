@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-# sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo add-apt-repository ppa:ubuntu-wine/ppa
 
